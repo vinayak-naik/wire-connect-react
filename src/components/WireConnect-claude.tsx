@@ -160,7 +160,7 @@ export const SchoolStudentConnectPageClaude: React.FC = () => {
       </div>
 
       {/* Student List */}
-      <div className="z-[1] max-h-full w-2/5 overflow-y-auto pl-5">
+      <div className="z-[1] flex max-h-full w-2/5 flex-wrap gap-4 overflow-y-auto pl-5">
         {students.map(student => (
           <div
             key={student.id}
@@ -175,7 +175,7 @@ export const SchoolStudentConnectPageClaude: React.FC = () => {
             onMouseLeave={() => {
               // No-op: keeping lastHoveredStudentRef
             }}
-            className="mb-4 cursor-pointer rounded border border-[#fb8c00] bg-[#ffe0b2] p-2.5"
+            className="mb-4 w-2/5 cursor-pointer rounded border border-[#fb8c00] bg-[#ffe0b2] p-2.5"
           >
             {student.name}
           </div>
