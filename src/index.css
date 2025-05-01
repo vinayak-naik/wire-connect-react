@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: black;
+  --color-primary-dark: #2563eb;
+  --color-primary-light: #2563eb;
+  --color-secondary: white;
+
+  --color-success: #16a34a;
+  --color-warning: #ebc30d;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+}
+
+/* For default border color (--color-gray-200) */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
